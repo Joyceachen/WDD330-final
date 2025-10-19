@@ -1,0 +1,112 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: lightblue;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Makes mobile friendly */
+}
+
+.task-input input, .task-input button {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Yellow Buttons with Animation */
+.task-input button, 
+.filters button {
+    background: #FFD700; /* Gold Yellow */
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.task-input button:hover, 
+.filters button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background: #FFC300; /* Slightly darker yellow */
+}
+
+.filters {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: auto;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background: #fff;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.task:hover {
+    transform: scale(1.02);
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.controls {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .task-input {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .task-input input, .task-input button {
+        width: 90%;
+    }
+}
+
+/* time input */
+button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffdb4d;
+    transform: scale(1.05);
+}
